@@ -1,11 +1,11 @@
-package com.jiang.algorithm.stack;
+package com.jiang.algorithm.tree;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author: newjiang
- * @date: 2020/4/2 11:45
+ * @date: 2020/04/02
  * @description: todo 二叉树的中序遍历
  **/
 public class InorderTraversal {
@@ -29,24 +29,5 @@ public class InorderTraversal {
             fun(root.getRight(root), list);
         }
         return list;
-    }
-}
-
-class TreeNode {
-
-    public int val;
-    public TreeNode left;
-    public TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-
-    public TreeNode getLeft(TreeNode node) {
-        return node.left;
-    }
-
-    public TreeNode getRight(TreeNode node) {
-        return node.right;
     }
 }
