@@ -27,10 +27,10 @@ import java.util.Stack;
  * 输出: true
  *
  **/
-public class Solution2 {
+public class IsValid {
     public static void main(String[] args) {
         String s = "(){}[)]{}";
-        boolean valid = new Solution2().isValid(s);
+        boolean valid = new IsValid().isValid(s);
         System.out.println(valid);
     }
 

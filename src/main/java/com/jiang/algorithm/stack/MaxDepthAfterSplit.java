@@ -24,11 +24,11 @@ import java.util.Stack;
  * 对于)：深度是奇数的是0，偶数的是1
  *
  **/
-public class Solution1 {
+public class MaxDepthAfterSplit {
 
     public static void main(String[] args) {
         String seq = "((()))";
-        Solution1 so = new Solution1();
+        MaxDepthAfterSplit so = new MaxDepthAfterSplit();
         int[] ints = so.maxDepthAfterSplitByStack(seq);
         for (int i = 0; i < ints.length; i++) {
             System.out.print(ints[i] + " ");
