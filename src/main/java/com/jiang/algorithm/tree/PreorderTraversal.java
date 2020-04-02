@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @author: newjiang
  * @date: 2020/4/2 14:02
- * @description: todo
+ * @description: todo 二叉树的前序遍历
  **/
 public class PreorderTraversal {
 
