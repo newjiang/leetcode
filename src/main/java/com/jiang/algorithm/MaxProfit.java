@@ -36,4 +36,27 @@ public class MaxProfit {
         }
         return max > 0 ? max : 0;
     }
+
+    /**
+     * 整合版本
+     * @param prices
+     * @return
+     */
+    public int maxProfit1(int[] prices) {
+        if (prices.length < 2) {
+            return 0;
+        }
+        int max = prices[1] - prices[0];
+        int[] temp = new int[prices.length - 1];
+        for (int i = 1; i < prices.length; i++) {
+            temp[i - 1] = prices[i] - prices[i - 1];
+            if (i > 1) {
+                if (temp[i - 2] > 0) {
+                    temp[i - 1] += temp[i - 2];
+                }
+                max = Math.max(temp[i - 1], max);
+            }
+        }
+        return max > 0 ? max : 0;
+    }
 }
