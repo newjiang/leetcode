@@ -12,8 +12,24 @@ package com.jiang.algorithm;
 public class MaxProfit {
 
     public static void main(String[] args) {
-        int[] arr = new int[]{};
-        System.out.println(new MaxProfit().maxProfit(arr));
+        int[] arr = new int[]{7, 6, 4, 3, 1};
+        System.out.println(new MaxProfit().maxProfit2(arr));
+    }
+
+
+    /**
+     * 买卖股票的最佳时机 II
+     * @param prices 最大利润
+     * @return
+     */
+    public int maxProfit2(int[] prices) {
+        int sum = 0;
+        for (int i = 1; i < prices.length; i++) {
+            if (prices[i] > prices[i - 1]) {
+                sum += prices[i] - prices[i - 1];
+            }
+        }
+        return sum;
     }
 
     public int maxProfit(int[] prices) {
@@ -39,6 +55,7 @@ public class MaxProfit {
 
     /**
      * 整合版本
+     *
      * @param prices
      * @return
      */
